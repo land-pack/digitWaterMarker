@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Photos - Watermark.ws</title>
+    <meta charset="utf-8">
+    {% include 'header_script.html' %}
+
+    <meta name="csrf-token" content="OmbrVlmTo4KxSXV9xpBqit8cA7QvBaIB97RQDmdA">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!--<link href="/build/css/app-7aac6b14.css" rel="stylesheet">-->
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/app-7aac6b14.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='icon/icon.png') }}" rel="icon" type="image/x-icon">
+    <link href="https://www.watermark.ws/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+    {% include 'some_script.html' %}
+</head>
+
+<body class="page home">
+
+<div id="slide-content">
+
+    <nav id="navbar-fixed-top" class="navbar navbar-fixed-top navbar-inverse sb-slide  navbar-user-guest ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">
+                    <a class="nav" href="https://www.watermark.ws/home"><img alt="Watermark Photos Online"
+                                                                             src="https://www.watermark.ws/images/logo.svg"></a>                </span>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-header-navbar">
+                <ul class="nav navbar-nav">
+                    <li class="navtab active"><a class="nav" href="#" data-trigger="hover" data-toggle="popover"
+                                                 data-html="true" data-placement="bottom" data-delay="1000"
+                                                 data-content="The section contains your <b>imported originals</b>.">PHOTOS</a>
+                    </li>
+                    <li class="navtab"><a href="https://www.watermark.ws/batches" data-trigger="hover"
+                                          data-toggle="popover" data-html="true" data-placement="bottom"
+                                          data-delay="1000"
+                                          data-content="The section contains your <b>finished watermarked copies</b>.">FINISHED</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="javascript: void(0);" class="uservoice"><i class="fa fa-fw fa-chat"></i> <span
+                                class="visible-xs-inline">Chat With Us</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span>
+								<img alt="Profile photo" class="profile-image img-circle"
+                                     src=" https://www.watermark.ws/images/profile-guest.png ">
+                                <span class="caret hidden-xs"></span>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="guest">
+                                You are currently <b>not logged in</b>. Your photos and progress could be lost
+                                on your next visit.<br><br>
+                                Please <b>Log In or Sign Up</b>.
+                                <br><br>
+                                <a href="{{ url_for('login') }}">Log In</a>
+                                <a class="{[ url_for('register')}}">Sign Up</a>
+                                <a class="mar-ss upgrade" href="{{ url_for('plans')}}"><i
+                                        class="fa fa-fw fa-crown"></i> Upgrade</a>
+                            </li>
+                            <li><a href="javascript: void(0);" class="uservoice"><i class="fa fa-fw fa-chat"></i> Chat
+                                With Us</a></li>
+                            <li><a class="nav" href="https://www.watermark.ws"><i
+                                    class="fa fa-fw fa-sign-out hidden-xs"></i> Exit </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="subnav" class="subnav sb-slide ">
+        <ol class="breadcrumb pull-left">
+            <li class="active">Photos</li>
+        </ol>
+        <button type="button" class="btn btn-primary pull-right create-folder">
+            <i class="fa fa-fw fa-folder-add"></i>
+            <span class="hidden-xs">Add Folder</span>
+        </button>
+    </div>
+
+    <div class="sb-site-container">
+        <div class="container-fluid content-wrap" id="content">
+
+            <div class="row nodes content  " id="nodes">
+                <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="row node node-parent folder " data-node-id="1512125" data-file-count="1">
+                        <div class="col-xs-3 col-sm-12 node-parent-thumbs node-parent-single">
+                            <div class="row">
+                                <div class="col-sm-12 hidden-xs">
+                                    <img class="img-responsive"
+                                         src="https://s3.amazonaws.com/muchmedia-watermark/file/thumb/68cb6d9fe6e56799b17aa407f03f50dc.jpg">
+                                </div>
+                            </div>
+                            <div class="node-parent-img visible-xs">
+                                <i class="fa fa-folder"></i>
+                            </div>
+                        </div>
+                        <div class="col-xs-9 col-sm-12 node-parent-info">
+                            <div class="node-parent-name">My First Folder</div>
+                            <div class="pull-left">
+                                <ul class="list-inline text-muted">
+                                    <li>1 Photo</li>
+                                </ul>
+                            </div>
+                            <div class="node-parent-options">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-xs btn-default dropdown-toggle"
+                                            data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="https://www.watermark.ws/folder/1512125"><i
+                                                class="fa fa-fw fa-folder-open"></i> Open</a></li>
+                                        <li><a href="javascript:void(0);" class="folder-edit"><i
+                                                class="fa fa-fw fa-pencil"></i> Edit</a></li>
+                                        <li><a href="javascript:void(0);" class="folder-rename"><i
+                                                class="fa fa-fw fa-rename"></i> Rename</a></li>
+                                        <li><a href="javascript:void(0);" class="folder-delete"><i
+                                                class="fa fa-fw fa-trash-o"></i> Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="row node-parent node-add create-folder">
+                        <i class="fa fa-fw fa-folder-add"></i>
+                        <div>Add Folder</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row hidden" id="nodes-empty">
+                <div class="col-xs-10 col-xs-offset-1 text-center mar-s">
+                    <h2 class="text-muted">No folders here.</h2>
+                    <h5 class="text-muted">
+                        <a class="create-folder" href="javascript:void(0);"><b>Add a new folder</b></a> to add photos.
+                    </h5>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-fixed-bottom sb-slide " id="navbar-fixed-bottom">
+        <p class="text-center text-muted">
+            <span><b>Click on a folder</b> or <a class="create-folder" href="javascript:void(0);">add a
+                folder</a>.</span>
+        </p>
+    </nav>
+
+
+</div>
+
+<div class="sb-slidebar sb-left navbar-inverse">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="user  guest-user ">
+            <a href="#">
+                    <span>
+                        <img alt="Profile photo" class="profile-image img-circle"
+                             src=" https://www.watermark.ws/images/profile-guest.png ">
+                         Logged in as Guest                     </span>
+            </a>
+        </li>
+        <li class="guest-message">
+            You are currently <u>not logged in</u>. Your photos and progress could be lost
+            on your next visit.<br><br>Please <b>Log In or Sign Up.</b>
+        </li>
+        <li><a class="nav" href="{{ url_for('login')}} "><i class="fa fa-fw fa-sign-in"></i> Log In</a></li>
+        <li class="signup"><a class="nav" href="https://www.watermark.ws/register"><i
+                class="fa fa-fw fa-check-square-o"></i> Sign Up</a></li>
+        <li><a class="nav  active " href="https://www.watermark.ws/home"><i class="fa fa-fw fa-batch"></i> Photos</a>
+        </li>
+        <li><a class="nav " href="https://www.watermark.ws/batches"><i class="fa fa-fw fa-flag-checkered"></i> Finished</a>
+        </li>
+        <li class="nav-divider"></li>
+        <li><a class="nav btn-success" href="https://www.watermark.ws/plans"><i
+                class="fa fa-fw fa-crown hidden-xs'"></i> Upgrade</a></li>
+        <li>
+            <a href="javascript: void(0);" class="uservoice"><i class="fa fa-fw fa-chat"></i> <span
+                    class="visible-xs-inline">Chat With Us</span></a>
+        </li>
+        <li><a href="javascript: void(0);" class="uservoice sb-close"><i class="fa fa-fw fa-question-circle"></i>
+            Contact Us</a></li>
+        <li><a class="nav" href="https://www.watermark.ws"><i class="fa fa-fw fa-sign-out"></i> Exit </a></li>
+    </ul>
+</div>
+
+
+<script src="{{ url_for('static',filename='js/require.js')}}"></script>
+<script>
+    require.config({
+        baseUrl: "https://www.watermark.ws/js",
+        waitSeconds: 0
+    });
+    window.pageVars = {};
+    window.pageVars = {"after": null};
+    window.pageVars['site_url'] = 'https://www.watermark.ws/';
+    window.pageVars['arrUser'] = {
+        "id": 498190,
+        "last_login_id": 1130525,
+        "subscription_id": null,
+        "email": null,
+        "username": null,
+        "hash": "de1bbeef825a9982b57c6070011306c5",
+        "ip": "14.47.125.218",
+        "referrer": "https:\/\/www.google.co.kr\/",
+        "affiliate": null,
+        "stripe_id": null,
+        "stripe_active": 0,
+        "stripe_subscription": null,
+        "stripe_plan": null,
+        "last_four": null,
+        "trial_ends_at": null,
+        "subscription_ends_at": null,
+        "stripe_brand": null,
+        "stripe_funding": null,
+        "stripe_country_code": null,
+        "stripe_expiry_month": null,
+        "stripe_expiry_year": null,
+        "storage_used": 125723,
+        "login_count": 1,
+        "folder_count": 1,
+        "file_count": 1,
+        "total_files_imported_count": 1,
+        "watermark_template_count": 1,
+        "finished_batch_count": 1,
+        "subscription_count": 0,
+        "download_count": 1,
+        "total_batches_created_count": 1,
+        "total_batches_finished_count": 1,
+        "total_file_limit": 5,
+        "monthly_file_limit": 0,
+        "use_watermark_template": null,
+        "add_font": null,
+        "export_to_cloud": null,
+        "use_premium_font": null,
+        "first_name": null,
+        "last_name": null,
+        "phone": null,
+        "company": null,
+        "website": null,
+        "version": 3,
+        "created_at": "2016-03-31 00:27:32",
+        "registered_at": null,
+        "deleted_at": null,
+        "updated_at": "2016-03-31 00:27:32",
+        "plan": {
+            "id": 1,
+            "plan_bundle_id": 1,
+            "monthly_plan_id": 1,
+            "yearly_plan_id": 1,
+            "period": "monthly",
+            "stripe_id": null,
+            "stripe_test_id": null,
+            "paypal_id": null,
+            "paypal_test_id": null,
+            "monthly_cost": "0.00",
+            "cost": "0.00",
+            "discount": null,
+            "created_at": "2015-06-21 13:55:19",
+            "updated_at": "2015-06-21 13:55:19",
+            "plan_bundle": {
+                "id": 1,
+                "monthly_plan_id": 1,
+                "yearly_plan_id": 1,
+                "name": "basic",
+                "batch_retention_days": 1,
+                "total_file_limit": 5,
+                "monthly_file_limit": 0,
+                "use_watermark_template": false,
+                "add_font": false,
+                "export_to_cloud": false,
+                "use_premium_font": false,
+                "email_support": false,
+                "phone_support": false,
+                "created_at": "2015-06-21 13:55:19",
+                "updated_at": "2015-06-21 13:55:19",
+                "isFree": true,
+                "isPopular": false
+            }
+        },
+        "hasSubscribed": false,
+        "isSubscribed": false,
+        "isBelowTotalFileLimit": true,
+        "isBelowMonthlyFileLimit": true,
+        "guidesShown": [2, 3, 4],
+        "canExportToCloud": false,
+        "canUseWatermarkTemplate": false,
+        "canUsePremiumFont": false,
+        "subscription_relation": null,
+        "guides": [{
+            "id": 945888,
+            "user_id": 498190,
+            "code": 2,
+            "created_at": "2016-03-31 00:28:54",
+            "updated_at": "2016-03-31 00:28:54"
+        }, {
+            "id": 945890,
+            "user_id": 498190,
+            "code": 3,
+            "created_at": "2016-03-31 00:29:31",
+            "updated_at": "2016-03-31 00:29:31"
+        }, {
+            "id": 945891,
+            "user_id": 498190,
+            "code": 4,
+            "created_at": "2016-03-31 00:29:39",
+            "updated_at": "2016-03-31 00:29:39"
+        }]
+    };
+    require(["{{ url_for('static',filename='js/app-a88385e0.js')}}" ], function () {
+        require(['app']);
+    });
+</script>
+
+<script>
+    analytics.identify('498190', {
+        userType: 'User Guest',
+        plan: 'Basic',
+        email: '',
+        firstName: '',
+        lastName: '',
+        gender: '',
+        avatar: '',
+        phone: '',
+        website: '',
+        username: '',
+        createdAt: 1459398452,
+        'files_imported': 1,
+        'batches_created': 1,
+        'batches_finished': 1,
+        'downloads': 1,
+        'subscribed_at': '',
+        'version': 3,
+        'hash': 'de1bbeef825a9982b57c6070011306c5'
+    }, {
+        integrations: {
+            Intercom: {
+                user_hash: 'd2acc6b1dc38c2d0f5d0719349dd773482deda07f5d29c264ea7acd6cabb56aa'
+            }
+        }
+    });
+</script>
+
+
+<script type="text/javascript">window.NREUM || (NREUM = {});
+NREUM.info = {
+    "beacon": "bam.nr-data.net",
+    "licenseKey": "01d383b72d",
+    "applicationID": "9283461",
+    "transactionName": "MVVaZUBTChJWU0JQXwgfeVJGWwsPGFZZVVQDQhZYXFYBGQ==",
+    "queueTime": 0,
+    "applicationTime": 62,
+    "atts": "HRJZEwhJGRw=",
+    "errorBeacon": "bam.nr-data.net",
+    "agent": ""
+}</script>
+</body>
+</html>
